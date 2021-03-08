@@ -1,7 +1,7 @@
 package com.maxpiroddi.projectmanager.projectmanager.model;
 
 
-import com.maxpiroddi.projectmanager.projectmanager.util.JobTitles;
+import com.maxpiroddi.projectmanager.projectmanager.util.JobTitle;
 
 import java.util.Objects;
 
@@ -16,12 +16,12 @@ public class Employee {
 
     private @Id @GeneratedValue Long id;
     private String name;
-    private JobTitles.JobTitle role;
+    private JobTitle role;
 
     Employee() {
     }
 
-    public Employee(String name, JobTitles.JobTitle role) {
+    public Employee(String name, JobTitle role) {
         this.name = name;
         this.role = role;
     }
@@ -42,11 +42,11 @@ public class Employee {
         this.name = name;
     }
 
-    public JobTitles.JobTitle getRole() {
+    public JobTitle getRole() {
         return role;
     }
 
-    public void setRole(JobTitles.JobTitle role) {
+    public void setRole(JobTitle role) {
         this.role = role;
     }
 
