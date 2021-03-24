@@ -4,12 +4,10 @@ import java.time.LocalDate;
 import java.util.Objects;
 import java.util.List;
 
-import javax.persistence.ElementCollection;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
+@Table(name = "projects")
 public class Project {
 
     @Id

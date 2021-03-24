@@ -1,27 +1,26 @@
 package com.maxpiroddi.projectmanager.projectmanager.model;
 
 
-import com.maxpiroddi.projectmanager.projectmanager.util.JobTitle;
-
 import java.util.Objects;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table(name = "employees")
 public class Employee {
 
 
 
     private @Id @GeneratedValue Long id;
     private String name;
-    private JobTitle role;
+    private String role;
 
     Employee() {
     }
 
-    public Employee(String name, JobTitle role) {
+    public Employee(String name, String role) {
         this.name = name;
         this.role = role;
     }
@@ -42,11 +41,11 @@ public class Employee {
         this.name = name;
     }
 
-    public JobTitle getRole() {
+    public String getRole() {
         return role;
     }
 
-    public void setRole(JobTitle role) {
+    public void setRole(String role) {
         this.role = role;
     }
 

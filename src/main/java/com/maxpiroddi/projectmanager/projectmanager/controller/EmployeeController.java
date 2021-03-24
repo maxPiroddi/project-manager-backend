@@ -17,7 +17,7 @@ public class EmployeeController {
 
     @GetMapping("/employees")
     List<Employee> all() {
-        return repository.findAll();
+        return (List<Employee>) repository.findAll();
     }
 
     @PostMapping("/employees")

@@ -23,7 +23,7 @@ public class ProjectController {
 
     @GetMapping("/projects")
     List<Project> all() {
-        return repository.findAll();
+        return (List<Project>) repository.findAll();
     }
 
     @PostMapping("/projects")
